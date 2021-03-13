@@ -1,38 +1,56 @@
-.App {
-  text-align: center;
+
+/*import google font*/
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Redressed&display=swap');
+
+ .banner{
+   width: 100%;
+   height: 100vh;
+   background-color: #ccc;
+   background: 
+      linear-gradient(65deg,#7df 50%,transparent 50%) center center / 100% 100% ,
+      url("https://upload.cc/i1/2021/03/13/lA1Eex.jpg") right center / auto auto;
+   ;
+ }
+
+ .container{
+   width: 100%;
+   max-width: 1400px;
+   margin: auto;
+   height: 100%; 
+ }
+
+ .banner-txt{
+   height: 100%;
+   display:flex;
+   flex-direction: column;
+   justify-content: center ;
+   align-items: flex-start;
+ }
+
+ .banner-txt h1{
+   font-size: 80px;
+   border-bottom: 1px solid #333;
+   font-family: 'Redressed', cursive;
+   font-weight: 900 ;
+   padding-bottom: .3em;
+   margin-bottom: .3em;
+ }
+
+ .banner-txt h1 small{
+   display: block;
+   font-size: 53px;
+   font-weight: 700 ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.banner-txt h2{
+   font-size: 50px;
+   font-weight: 700 ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner-txt p{
+   font-size: 20px;
+   font-weight: 300 ;
+   font-family: 'Akaya Telivigala', cursive;
+   font-family: 'Redressed', cursive;
 }
