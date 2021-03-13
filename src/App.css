@@ -5,8 +5,7 @@
 
  .banner{
    width: 100%;
-   height: 100vh;
-   background-color: #ccc;
+   height: 100vh; 
    background: 
       linear-gradient(65deg,#7df 50%,transparent 50%) center center / 100% 100% ,
       url("https://upload.cc/i1/2021/03/13/U8M63F.jpg") right center / auto auto;
@@ -39,7 +38,8 @@
 
  .banner-txt h1 small{
    display: block;
-   font-size: 53px;
+   font-size: 35px;
+   color:dimgray;
    font-weight: 700 ;
 }
 
@@ -53,4 +53,208 @@
    font-weight: 300 ;
    font-family: 'Akaya Telivigala', cursive;
    font-family: 'Redressed', cursive;
+}
+
+
+
+
+
+/* button */
+
+
+ .button { 
+  margin-bottom:.3em;
+  margin-left:.3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50, -50);
+  font-family: 'Akaya Telivigala', cursive;
+  font-family: 'Redressed', cursive;
+ }
+ 
+ .button {
+  background: #7df;
+  color: #000;
+  width: 240px;
+  height: 80px;
+  border: 3px solid #777;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: .6s;
+  overflow: hidden;
+  border-radius: 3%;
+ }
+ 
+ .button:focus {
+  outline: none;
+ }
+ 
+ .button:before {
+     content: '';
+     display: block;
+     position: absolute;
+     background: rgba(255,255,255,.5);
+     width: 60px;
+     height: 100%;
+     left: 0;
+     top: 0;
+     opacity: .5;
+     filter: blur(30px);
+     transform: translateX(-130px) skewX(-15deg);
+ }
+ 
+ .button:after {
+     content: '';
+     display: block;
+     position: absolute;
+     background: rgba(167, 114, 114, 0.2);
+     width: 30px;
+     height: 100%;
+     left: 30px;
+     top: 0;
+     opacity: 0;
+     filter: blur(30px);
+     transform: translateX(-100px) scaleX(-15deg);
+ }
+ 
+ .button:hover {
+    background: #f5d6b8;
+    cursor: pointer;
+ }
+ 
+ .button:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: .6;
+  transition: .7s;
+ }
+ 
+ .button:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: .7s;
+ }
+
+
+/* form */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background: url('https://i.imgur.com/kk76J5I.jpg') no-repeat top center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 550px;
+  background: rgba(0,0,0,0.8);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.wrapper .title h1{
+  color: #c5ecfd;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-form{
+  display: flex;
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+  width: 48%;
+}
+
+.input-p{
+  color: #fff;
+}
+.input-h1{
+  margin-top: 30%;
+  margin-top: 15%;
+  color: #fff;
+}
+
+.input-fields .input,
+.msg textarea{
+  margin: 10px 3px;
+  background: transparent;
+  border: 0px;
+  border-bottom: 2px solid #c5ecfd;
+  padding: 10px;
+  color: #c5ecfd;
+  width: 100%;
+}
+
+.msg textarea{
+  height: 212px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #c5ecfd;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c5ecfd;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c5ecfd;
+}
+
+.btn_cal{
+    background: #39b7dd;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top:15px;
+}
+
+.btn_cancel{
+  background: #AA1555;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top:15px;
+}
+
+@media screen and (max-width: 600px){
+  .contact-form{
+    flex-direction: column;
+  }
+  .msg textarea{
+    height: 80px;
+  }
+  .input-fields,
+  .msg{
+    width: 100%;
+  }
 }
