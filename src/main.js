@@ -24,7 +24,12 @@ class main extends React.Component{
         this.setState({ showBMI:true }) 
     }
     handleCloseBMI(){ 
-        this.setState({ showBMI:false }) 
+        this.setState({ 
+            showBMI:false,
+            heightValue:'',
+            weightValue:'',
+            bmiValue:''
+         }) 
     }
 
     handleHeightChange(event) {
@@ -50,15 +55,14 @@ class main extends React.Component{
                 <div class="container">
                     <div class="banner-txt">
                         <h1>
-                            Fitness partner
+                            Yuntech Fitness
                             <small> 
-                              let me help you to calculate it!
+                             "Push yourself because no one else is going to do it for you."
                             </small>
                         </h1>
    
-                        <button class = "button" type="button" onClick={this.handleShowBMI} >BMI</button>
-                        <button class = "button" type="button">TDEE</button>
-
+                        {/* <button class = "button" type="button" onClick={this.handleShowBMI} >BMI</button> 
+ */}
 
                         { this.state.showBMI ?    
                             <div class="wrapper">
